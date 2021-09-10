@@ -16,7 +16,7 @@ int main(int argc, char **argv) {
     } else {prefix = argv[1];}
 
     for(;;) {
-        printf("%s >> ", prefix);
+        printf("csh(%s) -> ", prefix);
         #pragma GCC diagnostic ignored "-Wunused-result" 
         fgets(cmd, 128, stdin);
         if(sizeof(cmd) > sizeof(char) * 128) {
