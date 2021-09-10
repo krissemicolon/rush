@@ -17,6 +17,7 @@ int main(int argc, char **argv) {
 
     for(;;) {
         printf("%s >> ", prefix);
+        #pragma GCC diagnostic ignored "-Wunused-result" 
         fgets(cmd, 128, stdin);
         if(sizeof(cmd) > sizeof(char) * 128) {
             fprintf(stderr, "Error (csh): Command too big (over 128 chars)");

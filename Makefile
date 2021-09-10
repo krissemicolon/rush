@@ -1,7 +1,7 @@
 .POSIX:
 
 CC = gcc
-CFLAGS= -Wall
+CFLAGS = -Ofast
 
 csh: src/main.c
 	rm -f csh
