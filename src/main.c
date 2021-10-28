@@ -7,7 +7,7 @@ int main(int argc, char **argv) {
     char buffer[128];
 
     if(argc == 1) {
-        fprintf(stderr, "Usage: csh <prefix>\n");
+        fprintf(stderr, "Usage: rush <prefix>\n");
         exit(1);
     }
 
@@ -16,11 +16,11 @@ int main(int argc, char **argv) {
     } else {prefix = argv[1];}
 
     for(;;) {
-        printf("csh(%s) -> ", prefix);
+        printf("rush(%s) -> ", prefix);
         #pragma GCC diagnostic ignored "-Wunused-result" 
         fgets(cmd, 128, stdin);
         if(sizeof(cmd) > sizeof(char) * 128) {
-            fprintf(stderr, "Error (csh): Command too big (over 128 chars)");
+            fprintf(stderr, "Error (rush): Command too big (over 128 chars)");
             continue;
         }
 
